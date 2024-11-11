@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    opacity: 0.5;
+    z-index: -1;
+    transition: background-image 0.5s ease, opacity 0.5s ease;
+}
+
+.gallery {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery:hover {
+    transform: scale(1.02);
+}
+
+figure {
+    margin-bottom: 15px;
+}
+
+figure img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 1.2em;
+    color: #555;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.thumbnail-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.thumbnail-list li {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.thumbnail-list li:hover {
+    border-color: #007acc;
+    transform: translateY(-5px);
+    filter: grayscale(0%);
+}
+
+.thumbnail-list li.active {
+    filter: grayscale(0%);
+    border-color: #007acc;
+}
+
+.thumbnail-list img {
+    width: 100px;
+    height: auto;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail-list li:hover img {
+    transform: scale(1.1);
+}
+
+.student-info {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.student-info h1 {
+    font-size: 2em;
+    color: #007acc;
+    margin-bottom: 5px;
+}
+
+.student-info p {
+    font-size: 1em;
+    color: #555;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .thumbnail-list img {
+        width: 80px;
+    }
+}
