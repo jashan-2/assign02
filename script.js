@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const galleryImages = [
-        { thumbnailPath: 'images/flowers-pink-small.jpg', fullPath: 'images/flowers-pink-large.jpg', caption: 'Pink Flowers' },
-        { thumbnailPath: 'images/flowers-purple-small.jpg', fullPath: 'images/flowers-purple-large.jpg', caption: 'Purple Flowers' },
-        { thumbnailPath: 'images/flowers-red-small.jpg', fullPath: 'images/flowers-red-large.jpg', caption: 'Red Flowers' },
-        { thumbnailPath: 'images/flowers-white-small.jpg', fullPath: 'images/flowers-white-large.jpg', caption: 'White Flowers' },
-        { thumbnailPath: 'images/flowers-yellow-small.jpg', fullPath: 'images/flowers-yellow-large.jpg', caption: 'Yellow Flowers' }
+        { thumbnailPath: 'flowers-pink-small.jpg', fullPath: 'flowers-pink-large.jpg', caption: 'Pink Flowers' },
+        { thumbnailPath: 'flowers-purple-small.jpg', fullPath: 'flowers-purple-large.jpg', caption: 'Purple Flowers' },
+        { thumbnailPath: 'flowers-red-small.jpg', fullPath: 'flowers-red-large.jpg', caption: 'Red Flowers' },
+        { thumbnailPath: 'flowers-white-small.jpg', fullPath: 'flowers-white-large.jpg', caption: 'White Flowers' },
+        { thumbnailPath: 'flowers-yellow-small.jpg', fullPath: 'flowers-yellow-large.jpg', caption: 'Yellow Flowers' }
     ];
 
     const mainImage = document.querySelector("figure img");
